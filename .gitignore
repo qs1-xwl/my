@@ -1,0 +1,71 @@
+# Unity 项目用 .gitignore
+# 放在项目根目录（和 Assets、ProjectSettings 同级）
+# 作用：告诉 Git 哪些东西不要上传
+
+# ===== Unity 自动生成的缓存，绝对不能传 =====
+# Library 目录在你这里是 3.7GB，而且每次打开项目都会自动重建
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 崩溃内存快照，会越来越大
+/[Mm]emoryCaptures/
+
+# ===== Assets 里的压缩包 =====
+# 这些 zip 是下载来的素材原包，Unity 本身用不上，传上去纯占空间
+# 你项目里那个 superpowers-asset-packs.zip 就有 85MB
+*.zip
+*.rar
+*.7z
+
+# ===== 编辑器 / IDE 生成的文件 =====
+.vs/
+.gradle/
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity 生成的 meta 的 meta
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# 崩溃报告
+sysinfo.txt
+
+# ===== 打包出来的成品，一般不传源码仓库 =====
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics
+crashlytics-build.properties
+
+# Addressables 打包产物
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# 临时自动生成的 Android 资源
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ===== 提醒 =====
+# Assets 里每个资源的 .meta 文件必须一起提交，不能忽略
+# 少了 meta，Unity 会重新生成新的 GUID，素材引用会全部断掉
